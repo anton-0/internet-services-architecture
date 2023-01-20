@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="ISA labs"/>
+        <meta name="author" content="Anton Delinac"/>
+        <title>Team App</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <link rel="stylesheet" href="team_create.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="team_create.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Team App</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="../about/about.html">about</a></li>
+                    <li><a href="../team_list/team_list.html">teams</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Enter new team details</h2></header>
+                    <div class="error-text btw-header-table" id="error-text"></div>
+                    <form class="form-grid">
+                        <label for="name">Team name:</label>
+                        <input class="ui-input" type="text" id="name" name="name">
+                        <label for="city">City:</label>
+                        <input class="ui-input" type="text" id="city" name="city">
+                        <input class="ui-input" id="create-team-button" type="button" value="Create">
+                    </form>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>Copyright &copy; 2023, Anton Delinac.</p>
+            </footer>
+        </div>
+    </body>
+</html>

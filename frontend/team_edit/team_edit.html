@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="ISA labs"/>
+        <meta name="author" content="Anton Delinac"/>
+        <title>Team App</title>
+        <link rel="stylesheet" href="../styles.css"/>
+        <script src="../script.js" defer="defer"></script>
+        <script type="module" src="team_edit.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Team App</h1>
+            </header>
+
+            <nav class="navigation-bar">
+                <ul>
+                    <li><a href="../index.html">main</a></li>
+                    <li><a href="../about/about.html">about</a></li>
+                    <li><a href="../team_list/team_list.html">teams</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <article class="text--justified">
+                    <header><h2>Edit team details</h2></header>
+                    <div class="error-text" id="error-text"></div>
+
+                    <form class="form-grid">
+                        <label>Team name:</label>
+                        <label id="name"></label>
+                        <label for="city">City:</label>
+                        <input class="ui-input" type="text" id="city" name="city">
+                        <input class="ui-input" id="edit-team-button" type="button" value="Edit">
+                    </form>
+
+                </article>
+            </section>
+
+            <footer class="footer">
+                <p>Copyright &copy; 2023, Anton Delinac.</p>
+            </footer>
+        </div>
+    </body>
+</html>

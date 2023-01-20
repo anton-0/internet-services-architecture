@@ -1,0 +1,167 @@
+body {
+    background-color: #92a98f;
+    font-family: Georgia serif;
+}
+
+.container {
+    margin: 50px auto;
+    width: 1000px;
+}
+
+.header {
+    text-align: right;
+    background: #69ab63;
+    color: #e0ecef;
+    font-weight: bold;
+    border-style: groove;
+    border-color: black;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 10px;
+    font-style: italic;
+}
+
+.navigation-bar {
+    background-color: #7fd667;
+    border-style: groove;
+    border-color: black;
+    border-top: #7fd667;
+}
+
+.navigation-bar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar li {
+    display: inline-block;
+}
+
+.navigation-bar a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #214753;
+    font-weight: bold;
+}
+
+.navigation-bar a:hover {
+    background-color: #518d3f;
+    color: #5da6b7;
+}
+
+.main-section {
+    padding: 10px;
+    background-color: #e5f3e4;
+}
+
+.footer {
+    font-size: small;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.text--justified {
+    text-align: justify;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+.ui-control {
+    border-color: #D0C5C5;
+    background-color: #E0EEF7;
+    border-width: 1px;
+    padding: 1px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+
+.ui-control:focus {
+    outline: none;
+}
+
+.ui-button {
+    height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.ui-input {
+    height: 20px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.data-table {
+    border-collapse: collapse;
+}
+
+.data-table td, .data-table th {
+    padding: 6px;
+}
+
+.data-table thead {
+    background-color: #7fd667;
+    border-top: #7fd667;
+}
+
+.data-table tbody tr:hover {
+    background-color: #aad9a1;
+}
+
+.create-div {
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.create-div a {
+    text-decoration: none;
+    color: #000000;
+    border-style: ridge;
+    border-color: black;
+    border-width: 0.5px;
+    padding: 2px 5px;
+    background: #e0ecef;
+}
+
+.create-div a:hover {
+    background: #c6cbd2;
+}
+
+.error-text {
+    visibility: hidden;
+    font-weight: bold;
+    color: #cc1133;
+}
+
+.form-grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 150px 150px;
+}
+
+.btw-header-table {
+    margin-bottom: 10px;
+}
+
+.details-grid {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 100px 100px;
+}
