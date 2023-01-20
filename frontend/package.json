@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0-SNAPSHOT",
+  "description": "ISA labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anton-0/web-service-architecture"
+  },
+  "author": "Anton Delinac",
+  "scripts": {
+    "dev": "http-server -p 8083 -c-1"
+  },
+  "devDependencies": {
+    "http-server": "0.12.3"
+  }
+}
