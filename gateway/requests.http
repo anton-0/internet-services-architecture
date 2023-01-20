@@ -1,0 +1,91 @@
+# teams
+
+GET http://localhost:8080/api/teams
+
+###
+GET http://localhost:8080/api/teams/Tottenham%20Hotspurs%20FC
+
+###
+DELETE http://localhost:8080/api/teams/Tottenham%20Hotspurs%20FC
+
+###
+POST http://localhost:8080/api/teams
+Content-Type: application/json
+
+{
+  "name": "Tottenham Hotspurs FC",
+  "city": "London"
+}
+
+###
+PUT http://localhost:8080/api/teams/Arka%20Gdynia
+Content-Type: application/json
+
+{
+  "name": "areczka",
+  "city": "Gdynia"
+}
+
+###
+# synchronized
+
+GET http://localhost:8080/api/teams/Liverpool%20FC/footballers
+
+###
+GET http://localhost:8080/api/teams/Liverpool%20FC/footballers/6
+
+###
+DELETE http://localhost:8080/api/teams/Liverpool%20FC/footballers/4
+
+###
+POST http://localhost:8080/api/teams/Liverpool%20FC/footballers
+Content-Type: application/json
+
+{
+  "name": "Robert Lewandowski",
+  "team": "Liverpool FC",
+  "role": "forward"
+}
+###
+
+PUT http://localhost:8080/api/teams/FC%20Barcelona/footballers/9
+Content-Type: application/json
+
+{
+  "name": "Sergio Busqets",
+  "team": "FC Barcelona",
+  "role": "defender"
+}
+###
+# footballers
+
+GET http://localhost:8080/api/footballers
+
+###
+GET http://localhost:8080/api/footballers/1
+
+###
+DELETE http://localhost:8080/api/footballers/1
+
+###
+POST http://localhost:8080/api/footballers
+Content-Type: application/json
+
+{
+  "name": "Harry Kane",
+  "team": "Tottenham Hotspurs FC",
+  "role": "forward"
+}
+
+###
+GET http://localhost:8080/api/footballers/2
+
+###
+PUT http://localhost:8080/api/footballers/2
+Content-Type: application/json
+
+{
+  "name": "Eric Dier",
+  "team": "Tottenham Hotspurs FC",
+  "role": "midfielder"
+}
