@@ -8,7 +8,11 @@
   },
   "author": "Anton Delinac",
   "scripts": {
-    "dev": "http-server -p 8083 -c-1"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
   "devDependencies": {
     "http-server": "0.12.3"
