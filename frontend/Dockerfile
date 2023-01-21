@@ -1,10 +1,10 @@
-FROM node:18 AS builder
-
 FROM nginx
 
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /usr/share/nginx/html
 
-COPY app /usr/share/nginx/html/
+RUN rm -rf ./*
+
+COPY app .
 
 EXPOSE 80
 COPY nginx.conf /etc/nginx/conf.d/default.conf

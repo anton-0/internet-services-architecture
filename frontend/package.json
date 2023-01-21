@@ -7,13 +7,6 @@
     "url": "https://github.com/anton-0/web-service-architecture"
   },
   "author": "Anton Delinac",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
   "devDependencies": {
     "http-server": "0.12.3"
   }

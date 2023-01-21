@@ -17,12 +17,12 @@ public class InitializeData {
 
     @PostConstruct
     private synchronized void init() {
-        Team tottenham = Team.builder().name("Tottenham Hotspurs FC").city("London").build();
-        Team liverpool = Team.builder().name("Liverpool FC").city("Liverpool").build();
-        Team barcelona = Team.builder().name("FC Barcelona").city("Barcelona").build();
+        Team arsenal = Team.builder().name("Arsenal").city("London").build();
+        Team chelsea = Team.builder().name("Chelsea").city("London").build();
+        Team atletico = Team.builder().name("Atletico").city("Madrid").build();
 
-        teamService.create(tottenham);
-        teamService.create(liverpool);
-        teamService.create(barcelona);
+        teamService.create(arsenal);
+        teamService.create(chelsea);
+        teamService.create(atletico);
     }
 }

@@ -1,5 +1,6 @@
 package com.delinac.gateway;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -16,6 +17,7 @@ import java.util.Collections;
 @SpringBootApplication
 public class GatewayApplication {
 
+    @Autowired
     private Environment environment;
 
     public static void main(String[] args) {
