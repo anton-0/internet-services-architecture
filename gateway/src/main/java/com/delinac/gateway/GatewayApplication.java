@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
@@ -15,6 +16,8 @@ import java.util.Collections;
 @SpringBootApplication
 public class GatewayApplication {
 
+    private Environment environment;
+
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
     }
@@ -22,16 +25,21 @@ public class GatewayApplication {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
 
+        String host = environment.getProperty("server.host") + ":" + environment.getProperty("server.port");
+        String teams = "http://" + environment.getProperty("gateway.teams");
+        String footballers = "http://" + environment.getProperty("gateway.footballers");
+        System.out.printf("HOST: %s, TEAMS: %s, FOOTBALLERS: %s\n", host, teams, footballers);
+
         return builder.routes()
-                .route("teams", r -> r.host("localhost:8080")
+                .route("teams", r -> r.host(host)
                         .and()
                         .path("/api/teams/{name}", "/api/teams")
-                        .uri("http://localhost:8081"))
+                        .uri(teams))
                 .route("footballers", r -> r
-                        .host("localhost:8080")
+                        .host(host)
                         .and()
                         .path("/api/footballers", "/api/footballers/**", "/api/teams/footballers", "/api/teams/{name}/footballers", "/api/teams/{name}/footballers/**")
-                        .uri("http://localhost:8082"))
+                        .uri(footballers))
                 .build();
     }
 
