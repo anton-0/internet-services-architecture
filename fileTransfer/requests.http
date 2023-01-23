@@ -1,0 +1,6 @@
+GET http://localhost:9300/api/files/
+
+###
+GET http://localhost:9300/api/files/1/details
+
+###
